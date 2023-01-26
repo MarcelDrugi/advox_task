@@ -26,7 +26,7 @@
 ###### and: ```mysql -u myuser -p```  later in container shell.
 
 
-#### To run the app follow the steps below
+#### App description
 
 A new Cats section has been created in the tab:
 ```
