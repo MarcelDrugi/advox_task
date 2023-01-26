@@ -3,16 +3,14 @@
 1. clone repo from branch "development"
 2. ```cd advox_task```
 3. ```docker-compose up -d```
-4. ```docker-compose exec phpfpm bash```
-<br />
+4. ```docker-compose exec phpfpm env COMPOSER_MEMORY_LIMIT=-1 bash```
 4a. IN CONTAINER SHELL (You will need your Magento-marketplace authorization data. The username is the public key, the username is the private key from Magento Marketplace panel):
 ```
 >>> composer instal -vvv --prefer-source --no-interaction --no-dev -o
 >>> exit
 ```
 5. ```sudo chmod -R 777 mysql/```
-6. ```docker-compose -f docker-compose.yml exec phpfpm env COMPOSER_MEMORY_LIMIT=-1 bash```
-<br />
+6. ```docker-compose exec phpfpm env COMPOSER_MEMORY_LIMIT=-1 bash```
 6a. IN CONTAINER SHELL run 5 commands:
 ```
     >>> bin/magento setup:config:set --backend-frontname=admin --db-host=mysql:3315 --db-name=mydatabase --db-user=myuser --db-password=test123
