@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="cat" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cat memes</label>
+            <tab>catalog</tab>
+            <resource>PMazur_Cats::cats_config</resource>
+            <group id="cat_opinion" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="picture_text" translate="text on a picture" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Define the text on pictures</label>
+                    <comment>What does the cat say?</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
