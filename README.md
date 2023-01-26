@@ -28,7 +28,7 @@
 
 #### App description
 
-A new Cats section has been created in the tab:
+A new ***Cat memes*** section has been created in the tab:
 ```
 	Stores -> Configuration -> Catalog
 ```
