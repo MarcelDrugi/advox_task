@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  app:
+    image: nginx:1.16.1
+    ports:
+      - "8088:80"
+    volumes:
+      - ./conf/app/etc/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/var/www/html
+  phpfpm:
+    image: pmazurg4n/dockerhub:magento_training_task
+    volumes:
+      - ./src:/var/www/html
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3315:3315"
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    environment:
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: test123
+      MYSQL_ROOT_PASSWORD: test123
+      MYSQL_TCP_PORT: 3315
+    ports:
+    - 3315:3315
