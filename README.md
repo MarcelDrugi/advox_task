@@ -6,7 +6,7 @@
 4. ```docker-compose exec phpfpm env COMPOSER_MEMORY_LIMIT=-1 bash```
 4a. IN CONTAINER SHELL (You will need your Magento-marketplace authorization data. The username is the public key, the username is the private key from Magento Marketplace panel):
 ```
->>> composer instal -vvv --prefer-source --no-interaction --no-dev -o
+>>> composer instal -vvv --prefer-source --no-dev -o
 >>> exit
 ```
 5. ```sudo chmod -R 777 mysql/```
