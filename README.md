@@ -1,6 +1,6 @@
 
 #### To run the app follow the steps below:
-1. clone repo from branch "development"
+1. clone repo
 2. ```cd advox_task```
 3. ```docker-compose up -d```
 4. ```docker-compose exec phpfpm env COMPOSER_MEMORY_LIMIT=-1 bash```
@@ -13,7 +13,7 @@
 6. ```docker-compose exec phpfpm env COMPOSER_MEMORY_LIMIT=-1 bash```
 6a. IN CONTAINER SHELL run 5 commands:
 ```
-    >>> bin/magento setup:config:set --backend-frontname=admin --db-host=mysql:3315 --db-name=mydatabase --db-user=myuser --db-password=test123
+    	>>> bin/magento setup:config:set --backend-frontname=admin --db-host=mysql:3315 --db-name=mydatabase --db-user=myuser --db-password=test123
 	>>> bin/magento setup:install	
 	>>> bin/magento admin:user:create	(You will be asked to enter your admin details. Enter them and remember.)
 	>>> sh clear.sh
